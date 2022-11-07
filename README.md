@@ -1,24 +1,12 @@
-# README
+# CupThrow 
+Austin Varghese
+1098759
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple Rails Application
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Rules for CupThrow:
+User must sign in to play.
+User is then given 3 coins (denomination: 0.25) and 3 die (colour: white, sides: 6)
+User can then access the Play Game page and throw their cup.
+If User has more points when their cup is thrown then they gain points equal to the difference between them and the opponent.
+If they lose or tie they got no points.
