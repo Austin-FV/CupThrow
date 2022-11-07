@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CupThrow</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "CupThrow", root_path, id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home",   root_path %></li>
+            <% if logged_in? %>
+                <li><%= link_to "Play",   play_path %></li>
+                <li><%= link_to "User", current_user %></li>
+                <li>
+                  <%= link_to "Sign out", signout_path, method: "delete" %>
+                </li>
+                
+              </li>
+            <% else %>
+              <li><%= link_to "Sign in", signin_path %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+    <div class="container">
+      <% flash.each do |message_type, message| %>
+        <div class="center alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= yield %>
+    </div>
+
+  </body>
+</html>

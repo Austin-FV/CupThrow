@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<% provide(:title, "User Page") %>
+<h1>User Page</h1>
+
+<div class="col-md-6 col-md-offset-3">
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
+
+  <p>
+    <strong>Points: </strong>
+    <%= @user.points %>
+  </p>
+  
+  <p>
+    <strong>Coins: </strong>
+    <%= @user.coins %>
+    <p>(denomination: 0.25)</p>
+  </p>
+
+  <p>
+    <strong>Die: </strong>
+    <%= @user.die %>
+    <p>(sides: 6, colour: white)</p>
+  </p>
+  
+
+  <br>
+  <%= link_to "Play now!", play_path, class: "btn btn-lg btn-primary" %>
+  <br><br>
+  
+  <%= link_to "Sign out", signout_path, method: "delete" %> | 
+  <%= link_to 'Edit', edit_user_path(@user) %> | 
+  <%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+</div>
+
+

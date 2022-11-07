@@ -1,0 +1,25 @@
+<h1>Play CupThrow</h1>
+
+<div class="center jumbotron">
+    
+    <%= link_to "Throw Cup!", "#", class: "btn btn-lg btn-primary" %>
+
+    <br>
+    <br>
+    <p>
+        <strong>User Results: </strong>
+        <%= @results_player.results %>
+        <strong>User Total: </strong>
+        <%= @player_total %>
+    </p>
+    <p>
+        <strong>Opponent Results: </strong>
+        <%= @results_computer.results %>
+        <strong>Opponent Total: </strong>
+        <%= @computer_total %>
+    </p>
+
+    <br>
+    <p>You Won <%= @add %> Points!</p>
+    
+</div>
